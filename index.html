@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Character Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, serif;
+            background-color: #2C1810;
+            color: #F5DEB3;
+            overflow-x: hidden;
+        }
+        
+        /* R1 Device Simulation */
+        .r1-container {
+            max-width: 240px;
+            height: 100vh;
+            max-height: 282px;
+            margin: 0 auto;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background-color: #2C1810;
+        }
+        
+        /* For larger screens, show in center */
+        @media (min-width: 480px) {
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                background: #1a0f0a;
+            }
+            
+            .r1-container {
+                border: 3px solid #DAA520;
+                border-radius: 12px;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+            }
+        }
+        
+        #app {
+            width: 100%;
+            min-height: 100%;
+            padding: 15px;
+        }
+        
+        /* Loading screen */
+        .loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 282px;
+            text-align: center;
+        }
+        
+        .loading h1 {
+            color: #DAA520;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        
+        .spinner {
+            border: 3px solid #3E2723;
+            border-top: 3px solid #DAA520;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="r1-container">
+        <div id="app">
+            <div class="loading">
+                <h1>⚔️ D&D Character Generator ⚔️</h1>
+                <div class="spinner"></div>
+                <p style="margin-top: 20px; font-size: 14px;">Initializing...</p>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/app.js"></script>
+</body>
+</html>

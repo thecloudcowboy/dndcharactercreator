@@ -4,7 +4,10 @@
   "description": "Rabbit R1 app for generating D&D character images using magic camera",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "npx http-server . -p 8080"
   },
   "repository": {
     "type": "git",
@@ -13,7 +16,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://gitlab.com/gl-demo-premium-efranklin/dnd-character-pic-generator/issues"
   },
@@ -23,6 +26,6 @@
   },
   "devDependencies": {
     "@types/node": "^24.10.1",
-    "javascript": "^1.0.0"
+    "vite": "^5.0.0"
   }
 }

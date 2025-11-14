@@ -4,13 +4,62 @@ A Rabbit R1 app that generates Dungeons & Dragons character images using the R1'
 
 ## Features
 
-- **Character Creation**: Select from predefined D&D attributes (Race, Class, Gender, Equipment, Body Type, Emotion)
-- **Magic Camera Integration**: Uses R1's freestyle magic camera to generate character images
+- **Character Creation**: Select from predefined D&D attributes (Race, Class, Gender, Equipment, Body Type, Emotion, Art Style)
+- **Magic Camera Integration**: Uses R1's camera to generate character images
 - **Custom Fields**: Add your own character attributes and values
 - **Persistent Storage**: Custom fields and values are saved between sessions
-- **Journal Integration**: Generated images are automatically saved to your R1 journal
+- **Fantasy D&D Theme**: Beautiful medieval/fantasy UI design
+- **Works in Browser & R1**: Test in browser, deploy to R1 device
 
 ## Getting Started
+
+### Installation
+
+1. Clone this repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running Locally (Browser Testing)
+
+To test the app in your browser:
+
+```bash
+npm run serve
+```
+
+Then open your browser to `http://localhost:8080`
+
+**Note:** Camera and hardware features will show fallback messages in the browser. They will work properly on the R1 device.
+
+### Running with Vite Dev Server
+
+For hot-reload development:
+
+```bash
+npm run dev
+```
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+This creates optimized files in the `dist/` folder.
+
+## Deploying to Rabbit R1
+
+Since this uses the unofficial `r1-create` SDK, deployment to the R1 device requires:
+
+1. Access to R1's developer mode (if available)
+2. Or hosting the app and accessing it via R1's browser
+3. Or waiting for official Rabbit developer tools
+
+**Current Status:** The Rabbit R1 doesn't have an official app store or sideloading method yet. This app is ready to deploy once Rabbit releases developer tools.
+
+## Usage
 
 ### Installation
 
